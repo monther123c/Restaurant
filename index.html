@@ -1,46 +1,62 @@
 <!DOCTYPE html>
 <html>
-<body>
+  <head>
+    <style>
+    img {
+      border-radius: 50%;
+    }
+    table {
+  width: 100%;
+  border-collapse: collapse;
+}
+    </style>
+    </head>
 
-<h1>this is my restaurant</h1>
+<body style="background-color:DodgerBlue;">
+
+  <h1>this is my restaurant</h1>
+  <br>
+  <br>
+  <img src="./download.png" alt="my logo" width="200" height="200"> 
 
 
 
-<form  id="form">
-  <label for="foodname">Food Name:</label>
-  <input type="text" id="foodname" name="Foodname">
-  <label for="Types">Types of Food:</label>
-<select id="Type" name="type" form="type">
-  <option value="Fruit and vegetables">Fruit and vegetables</option>
-  <option value="Starchy food">Starchy food</option>
-  <option value="Dairy">Dairy</option>
-  <option value="Protein">Protein</option>
-  <option value="Fat">Fat</option>
-</select>
-<label for="Price">Price:</label>
-<input type="text" id="Price" name="Price">
-<button type="submit">Submit</button>
-</form>
-<br>
+  <form id="form">
+    <label for="foodname" style="opacity: 0.3;">Food Name:</label>
+    <input type="text" id="foodname" name="Foodname">
+    <label for="Types" style="opacity: 0.3;">Types of Food:</label>
+    <select id="Type" name="type" form="type">
+      <option value="Fruit and vegetables">Fruit and vegetables</option>
+      <option value="Starchy food">Starchy food</option>
+      <option value="Dairy">Dairy</option>
+      <option value="Protein">Protein</option>
+      <option value="Fat">Fat</option>
+    </select>
+    <label for="Price" style="opacity: 0.3;">Price:</label>
+    <input type="text" id="Price" name="Price">
+    <button id="submit" type="submit">Submit</button>
+  </form>
+  <br>
 
-<table id ="table">
-    <tr id ="tr">
-      <th class ="th"> ID</th>
-      <th class ="th">Name</th>
-      <th class ="th">Type</th>
-      <th class ="th">Price</th>
+  <table id="table" style="border: 2px solid Violet; border-style: dotted;">
+    <tr id="tr" style="border: 2px solid Violet;">
+      <th class="th"style="border: 2px solid Violet;"> ID</th >
+      <th class="th" style="border: 2px solid Violet;">Name</th>
+      <th class="th" style="border: 2px solid Violet;">Type</th>
+      <th class="th" style="border: 2px solid Violet;">Price</th>
     </tr>
 
 
-   
+
   </table>
-  
-<script src="./app.js"></script>
+
+  <script src="./app.js"></script>
 </body>
 <Footer>
-    <a href="https://www.facebook.com/">facebook</a>
-    <a href="https://www.linkedin.com/">linkedin</a>
+  <a href="https://www.facebook.com/">facebook</a>
+  <a href="https://www.linkedin.com/">linkedin</a>
 
-        <p>&copy; MMT99</p>
+  <p>&copy; MMT99</p>
 </Footer>
+
 </html>
