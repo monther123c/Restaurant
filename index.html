@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>
+
+<head>
+  <style>
     img {
       border-radius: 50%;
     }
+
     table {
-  width: 100%;
-  border-collapse: collapse;
-}
-    </style>
-    </head>
+      width: 100%;
+      border-collapse: collapse;
+    }
+  </style>
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./statistics.html">Statistics</a>
+  </nav>
+  <link rel="stylesheet" href="./style.css">
+</head>
 
 <body style="background-color:DodgerBlue;">
 
   <h1>this is my restaurant</h1>
   <br>
   <br>
-  <img src="./download.png" alt="my logo" width="200" height="200"> 
+  <img src="./download.png" alt="my logo" width="200" height="200">
 
 
 
@@ -25,7 +32,7 @@
     <label for="foodname" style="opacity: 0.3;">Food Name:</label>
     <input type="text" id="name" name="Foodname">
     <label for="type" style="opacity: 0.3;">Types of Food:</label>
-    <select id="type"  name="type">
+    <select id="type" name="type">
       <option value="Fruit and vegetables">Fruit and vegetables</option>
       <option value="Starchy food">Starchy food</option>
       <option value="Dairy">Dairy</option>
@@ -38,17 +45,16 @@
   </form>
   <br>
 
-  <table id="table" style="border: 2px solid Violet; border-style: dotted;">
-    <tr id="tr" style="border: 2px solid Violet;">
-      <th class="th"style="border: 2px solid Violet;"> ID</th >
-      <th class="th" style="border: 2px solid Violet;">Name</th>
-      <th class="th" style="border: 2px solid Violet;">Type</th>
-      <th class="th" style="border: 2px solid Violet;">Price</th>
-    </tr>
 
 
 
-  </table>
+
+
+
+
+
+
+
 
   <script src="./app.js"></script>
 </body>

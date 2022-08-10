@@ -54,31 +54,32 @@ let form= document.getElementById('form');
 let submit=document.getElementById('submit');
 let table= document.getElementById('table');
 var id =0;
+ var allFood= [];
 function foodConst (id,name,type,price){
     this.id=id;
     this.name = name;
     this.type = type;
     this.price = price;
-    this.render();
+   // this.render();
 }
-foodConst.prototype.render=function(){
-    let tRow =document.createElement('tr');
-    table.appendChild(tRow);
-    let IDs= document.createElement('td');
-    IDs.textContent = this.id;
-    tRow.appendChild(IDs);
-    let newName = document.createElement('td');
-    newName.textContent = this.name;
-    tRow.appendChild(newName);  
-    let newType = document.createElement('td');
-    newType.textContent = this.type;
-    tRow.appendChild(newType);
-    let newPrice = document.createElement('td');
-    newPrice.textContent = this.price;
-    tRow.appendChild(newPrice);
-    tRow.classList.add('row');
+// foodConst.prototype.render=function(){
+//     let tRow =document.createElement('tr');
+//     table.appendChild(tRow);
+//     let IDs= document.createElement('td');
+//     IDs.textContent = this.id;
+//     tRow.appendChild(IDs);
+//     let newName = document.createElement('td');
+//     newName.textContent = this.name;
+//     tRow.appendChild(newName);  
+//     let newType = document.createElement('td');
+//     newType.textContent = this.type;
+//     tRow.appendChild(newType);
+//     let newPrice = document.createElement('td');
+//     newPrice.textContent = this.price;
+//     tRow.appendChild(newPrice);
+//     tRow.classList.add('row');
 
-}
+// }
 foodConst.id;
 form.addEventListener('submit',handleSubmit);
     function handleSubmit(event){
@@ -88,10 +89,18 @@ form.addEventListener('submit',handleSubmit);
         let price = event.target.price.value;
         let id = uniqueId();
         const newFood = new foodConst(id,name,type,price);
+        allFood.push(newFood);
+        save(allFood);
     }
 
 
 function uniqueId(){
     val = Math.floor(1000 + Math.random() * 9000);
     return val;
+
+}
+
+function save(data){
+    var stringData =JSON.stringify (allFood);
+    localStorage.setItem("foods",stringData);
 }
