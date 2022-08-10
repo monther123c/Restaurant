@@ -83,8 +83,8 @@ foodConst.id;
 form.addEventListener('submit',handleSubmit);
     function handleSubmit(event){
         event.preventDefault();
-        let name = event.target.foodName.value;
-        let type = event.target.foodType.value;
+        let name = event.target.name.value;
+        let type = event.target.type.value;
         let price = event.target.price.value;
         let id = uniqueId();
         const newFood = new foodConst(id,name,type,price);
